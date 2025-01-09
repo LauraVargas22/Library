@@ -11,6 +11,7 @@ const resultBox = document.querySelector(".results"); //Resultados de búsqueda
 const inputBox = document.querySelector(".search-bar"); // Campo de entrada de texto
 const bookText = document.getElementById("bookText");
 
+//Texto que aparecerá de acuerdo al libro seleccionado
 const bookTexts = {
     "Noticia de un Secuestro": "Writer: Gabriel Garcia Marquez - Description: News of a Kidnapping is a book by Gabriel García Márquez that chronicles the kidnapping of ten Colombians in 1990. The book is a work of non-fiction that describes the events of the kidnappings, the pressure on the government, and the impact on the families of the hostages.",
     "El Olvido que Seremos": "Writer: Hector Abad Facciolince - Description: Forgotten We'll Be is a book and film that tells the story of Héctor Abad Gómez, a doctor and human rights activist in 1970s Medellín, Colombia. The story is told by his son, Héctor Abad Faciolince.",
@@ -40,7 +41,7 @@ inputBox.onkeyup = function (e) {
         displayResults(result);
     }
 };
-//Cuando el usuario hace clic sobre el elemento de música
+//Cuando el usuario hace clic sobre el libro desplegará la información de acuerdo al libro
 function selectInput(item) {
     const selected = item.innerText;
     inputBox.value = selected;
